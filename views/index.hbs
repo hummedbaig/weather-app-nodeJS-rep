@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+ {{>header}}
+<title>
+Weather Report App
+</title>
+
+ 
+
+<body>
+   
+    <h1>This is the {{title}}</h1>
+     {{>menu}}
+     <p>You can search for a city and see the weather report.</p><br/>
+
+      <form>
+          <input name="city_name"  id="city_name" placeholder="Enter city name" type="text">
+          <button id="search_btn">Search</button>
+      </form>
+
+    <p>Created By : {{name}}</p>
+    {{>footer}}
+ <script  src="/js/script.js"></script>
+</body>
+
+</html>
