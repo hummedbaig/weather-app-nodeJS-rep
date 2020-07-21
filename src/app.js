@@ -9,6 +9,8 @@ const publicDirectoryPath  = path.join(__dirname,"../public");
 const partial_path = path.join(__dirname,"../partials");
 const viewsPath  = path.join(__dirname,"../views");
 
+const port = process.env.PORT || 3000;
+
 app.set('view engine','hbs');
 app.use(express.static(publicDirectoryPath));
 app.set('views',viewsPath);
@@ -110,7 +112,7 @@ app.get("*",(req,res)=>{
 // app.use(express.static(path_html+"/about.html"));
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
 
-    console.log("Server is up on port 3000.");
+    console.log("Server is up on port "+port);
 })

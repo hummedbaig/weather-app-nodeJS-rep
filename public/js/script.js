@@ -18,15 +18,15 @@ weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault();
     const location = add.value;    
 
-    window.location.href = "http://localhost:3000/weather?address="+location;
-    // console.log(location);
+    window.location.href = "/weather?address="+location;
+    console.log(location);
 
-//     fetch('http://localhost:3000/weather?address='+location).then((response)=>{
+    fetch('/weather?address='+location).then((response)=>{
 
-//     response.json().then((data)=>{
-//         console.log(data.location);
-//     })
-// });
+    response.json().then((data)=>{
+        console.log(data.location);
+    })
+});
 
 })
 
